@@ -1,83 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSI Career Development Resource Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSI Career Development Resource Hub</title>
+  <link rel="stylesheet" href="css/html5reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-  <a href = "#maincontent">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
-        <nav>
-            <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "resume.html">Resumes</a></li>
-                <li><a href = "connections.html">Networking & Connections</a></li>
-                <li><a href="job-search.html">Job Search</a></li>
-            </ul>
-        </nav>
-    <h1>Welcome to the UMSI Career Development Resource Hub</h1>
+    <a href="#maincontent" class="skip-link">Skip to Main Content</a>
+    
+    <div class="header-container">
+      <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="logo">
+      
+      <nav>
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="resume.html">Resumes</a></li>
+          <li><a href="connections.html">Networking & Connections</a></li>
+          <li><a href="job-search.html">Job Search</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    </header>
-    <main id="maincontent">
-    <section>
+  <main id="maincontent">
+
+    <section class="hero">
+      <h1>Welcome to the UMSI Career Development Resource Hub</h1>
       <h2>Your Central Hub for Career Success at UMSI</h2>
       <p>
-        Ready to take the next step toward your future career? The UMSI Career Development Resource Hub is your one-stop shop for trusted guidance, practical tools, and the latest information to help you thrive as a student and job-seeker. Whether you are just starting your exploration or getting ready to launch your career, you will find everything you need, organized for you.
+        Welcome to the UMSI Career Development Resource Hub! This is your go-to place for guidance, tools, and information to help you thrive as a student and prepare for your career. Explore resources for resumes, networking, internships, career planning, and more—all in one accessible space.
       </p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/GSjGeDYJ5Nk?si=qhxJPRTIT___x8hG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/GSjGeDYJ5Nk?si=qhxJPRTIT___x8hG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
-    <section>
+    <section class="why-resource">
       <h2>Why Use This Resource?</h2>
-
-
       <ul>
-        <li><strong>Everything in One Place:</strong> Stop searching endlessly—quickly access the resources you need for resumes, interviews, networking, mentorship, and more.</li>
-        <li><strong>Student-Focused Navigation:</strong> Browse by topic or question. Key areas are highlighted so you can get moving right away.</li>
-        <li><strong>Guidance Backed by Experts:</strong> All resources are recommended and reviewed by the UMSI Career Development Office, so you can trust the advice and materials you find here.</li>
-        <li><strong>Always Accessible:</strong> Visit the site anytime, from any device. We’re committed to meeting the accessibility needs of all students.</li>
-        <li><strong>Modern Support, UMSI Excellence:</strong> We benchmark against top peer institutions and integrate UMSI’s unique support, showcasing our commitment to your success.</li>
+        <li><strong>All-in-One Access:</strong> Quickly find resumes, career guides, networking advice, and internship info without searching endlessly.</li>
+        <li><strong>Student-Focused Navigation:</strong> Organized by topic so you can find what matters most to your career stage.</li>
+        <li><strong>Expert Guidance:</strong> Resources vetted and updated by the UMSI Career Development Office.</li>
+        <li><strong>Accessible Anytime:</strong> Works on smartphones, tablets, and desktop devices for convenient access.</li>
+        <li><strong>Modern Support:</strong> Integrates UMSI’s unique career programs and benchmarks against top peer institutions.</li>
       </ul>
     </section>
-    <section>
-      <h2>Start Here</h2>
-      <div>
-        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
-        <ul>
-            <li><a href="resume.html">Resumes</a></li>
-            <li><a>Networking & Connections</a></li>
-            <li><a>Career Exploration</a></li>
-            <li><a>Talk to a Career Coach</a></li>
-        </ul>
-       
 
+    <section class="start-here">
+      
+      <!-- Resources Grid -->
+      <div class="start-resources">
+        <!-- Main Actions -->
+        <div class="start-main">
+        <h2>Start Here</h2>
+          <ul>
+            <li><a href="resume.html">Resumes & Templates</a></li>
+            <li><a href="connections.html">Networking & Connections</a></li>
+            <li><a href="#">Career Exploration & Planning</a></li>
+            <li><a href="#">Meet a Career Coach</a></li>
+          </ul>
+        </div>
+
+        <!-- Sidebar / Popular Resources -->
+        <aside class="start-aside">
+          <h3>Most Popular Resources</h3>
+          <ul>
+            <li><a href="https://umsi.instructure.com/courses/12345/pages/resume-guide" target="_blank">UMSI Resume Guide</a></li>
+            <li><a href="https://umsi.campusgroups.com/cdo/home/" target="_blank">Attend a Career Event</a></li>
+            <li><a href="https://umsi.instructure.com/courses/12345/pages/networking-tips" target="_blank">Networking Tips</a></li>
+            <li><a href="https://umsi.instructure.com/courses/12345/pages/interview-prep" target="_blank">Interview Preparation</a></li>
+            <li><a href="https://careerlink.umich.edu" target="_blank">CareerLink: UMSI’s Career Portal</a></li>
+          </ul>
+        </aside>
       </div>
-      <aside>
-        <h3>Most Popular Resources</h3>
-        <ul>
-          <li><a href="https://umsi.instructure.com/courses/12345/pages/resume-guide" target="_blank">UMSI Resume Guide</a></li>
-          <li><a href="https://umsi.campusgroups.com/cdo/home/" target="_blank">Attend a Career Event</a></li>
-          <li><a href="https://umsi.instructure.com/courses/12345/pages/networking-tips" target="_blank">Networking Tips</a></li>
-          <li><a href="https://umsi.instructure.com/courses/12345/pages/interview-prep" target="_blank">Interview Preparation</a></li>
-          <li><a href="https://careerlink.umich.edu" target="_blank">Career Link: UMSI’s Exclusive Career Portal</a></li>
-        </ul>
-      </aside>
     </section>
-    <section>
-      <h2>Connect with the UMSI Career Development Office</h2>
-      <p>
-        The UMSI Career Development Office (CDO) offers personalized support through appointments, events, and resource guides. <a href="https://www.si.umich.edu/programs/career-development-office" target="_blank">Visit the CDO website</a> or <a href="https://umsi.umich.edu/about/locations" target="_blank">find us on campus</a> to learn more, schedule a coaching session, or just say hello.
-      </p>
-    </section>
-       
-        <!-- Content taken & modified from UMGPT with the prompt, "Write me a webpage of intro content to help meet the following requirements - this is for the home page": and then pasted in the client objectives & project requirements"
-        UMGPT. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->
-    </main>
-    <footer>
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
-        </footer>
+
+    <div class="career-sections-container">
+      <section class="career-section">
+        <h2>Gain Experience & Build Skills</h2>
+        <p>Hands-on experience is key to career success. UMSI internships, credit-bearing courses, and project opportunities connect classroom learning to real-world settings.</p>
+        <div class="card">
+          <ul>
+            <li><strong>Internships:</strong> Apply for roles that match your skills and career goals.</li>
+            <li><strong>Project-Based Learning:</strong> Work on meaningful projects that demonstrate impact.</li>
+            <li><strong>Mentorship:</strong> Learn from experienced supervisors and UMSI alumni.</li>
+            <li><strong>Reflection:</strong> Credit-bearing courses like SI 390, SI 681, and SI 690 help you connect experience to your degree.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="career-section">
+        <h2>Connect with the UMSI Career Development Office</h2>
+        <p>The CDO provides personalized career coaching, workshops, and resources. Schedule a session, attend an event, or explore resources online to stay ahead in your career journey.</p>
+        <div class="card">
+          <ul>
+            <li><a href="https://www.si.umich.edu/programs/career-development-office" target="_blank">Visit the CDO Website</a></li>
+            <li><a href="https://umsi.umich.edu/about/locations" target="_blank">Find Us on Campus</a></li>
+            <li><a href="https://umsi.instructure.com/courses/12345/pages/meet-with-a-career-coach" target="_blank">Book a Coaching Session</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="career-section">
+        <h2>Resume & Networking Quick Links</h2>
+        <div class="card">
+          <ul>
+            <li><a href="resume.html">Resumes & Templates</a></li>
+            <li><a href="connections.html">Networking & Connections</a></li>
+            <li><a href="#">Career Planning Resources</a></li>
+            <li><a href="https://careerlink.umich.edu" target="_blank">CareerLink Portal</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a></p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,679 @@
+/* ==============================
+   Variables & Global Styles
+============================== */
+:root {
+  --um-blue: #00274c;
+  --um-maize: #ffcb05;
+  --text-hover: #2F65A7;
+  --text-dark: #222;
+  --text-light: #fff;
+  --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+}
+
+/* ==============================
+   Global Reset & Box-Sizing
+============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: #fff;
+  padding: 0rem 0rem;
+  margin: 0;
+  overflow-x: hidden; /* prevents horizontal scroll */
+}
+
+/* ==============================
+   Typography - UM Branding
+============================== */
+body, p, li {
+  font-family: var(--font-base);
+  color: var(--text-dark);
+  font-size: 1rem; 
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--um-blue);
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: var(--font-base);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--um-blue);
+  margin: 1rem 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--um-blue);
+  margin: 0.75rem 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+ul, ol {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--um-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover, a:focus {
+  color: var(--text-hover);
+  outline: none;
+}
+
+/* ==============================
+   Skip Link
+============================== */
+.skip-link, a[href="#maincontent"] {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--um-maize);
+  color: var(--um-blue);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  transition: top 0.2s;
+}
+.skip-link:focus, a[href="#maincontent"]:focus {
+  top: 0;
+}
+
+/* ==============================
+   Header & Navigation
+============================== */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--um-blue);
+  padding: 1rem;
+  width: 100%;
+}
+
+.header-container img.logo {
+  max-height: 60px;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  border-bottom: 2px solid var(--um-maize);
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--um-maize);
+  text-underline-offset: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ==============================
+   Hero / Welcome Section
+============================== */
+.hero {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+}
+
+.hero h1 {
+  background-color: #f0f0f0;
+  padding: 3rem;
+  font-family: var(--font-base);
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--um-blue);
+  margin: 0;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: var(--um-blue);
+  margin: 0;
+}
+
+.hero p {
+  max-width: 600px;
+  padding: 1rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 560px;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* ==============================
+   Why Use This Resource Section - Simplified
+============================== */
+.why-resource {
+  background-color: #fff;           /* clean white background */
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 2rem auto;                /* center on page */
+}
+
+.why-resource h2 {
+  font-size: 1.75rem;
+  color: var(--um-blue);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  border-bottom: 2px solid var(--um-maize); /* thin maize divider */
+  padding-bottom: 0.5rem;
+}
+
+.why-resource ul {
+  list-style: disc inside;          /* basic bullet points */
+  padding: 0;
+  margin: 1rem 0 0 0;
+  line-height: 1.6;
+}
+
+.why-resource li {
+  margin-bottom: 0.75rem;
+}
+
+.why-resource li strong {
+  color: var(--um-blue);
+}
+
+.why-resource a {
+  color: var(--um-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.why-resource a:hover,
+.why-resource a:focus {
+  color: var(--um-maize);
+  outline: none;
+}
+
+
+/* ==============================
+   Start Here Section - Centered Header + Pill Buttons
+============================== */
+.start-main {
+    padding: 2rem 1rem;
+    max-width: 900px;       /* same as .why-resource */
+    margin: 2rem auto;      /* center on page with vertical spacing */
+}
+
+.start-main h2 {
+  font-size: 1.75rem;
+  color: var(--um-blue);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  border-bottom: 2px solid var(--um-maize); /* thin maize divider */
+  padding-bottom: 0.5rem;
+}
+
+/* Button container */
+.start-main ul {
+  display: flex;
+  flex-wrap: wrap;                  /* wrap on small screens */
+  gap: 1rem;                        /* horizontal + vertical spacing between buttons */
+  padding: 0;                        /* remove extra padding since container is centered */
+  margin: 0 auto;                   /* center container */
+  list-style: none;
+  justify-content: center;           /* center buttons */
+}
+
+/* Each button column */
+.start-main li {
+  margin: 0;
+  flex: 1 1 200px;                  /* flexible width with min 200px */
+}
+
+/* Pill buttons */
+.start-main a {
+  display: inline-block;
+  width: 100%;                       /* fills li column */
+  text-align: center;
+  background-color: var(--um-blue);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.start-main a:hover,
+.start-main a:focus {
+  background-color: var(--um-maize);
+  color: var(--um-blue);
+  outline: none;
+}
+
+/* ==============================
+   Start Aside - Most Popular Resources Styling
+============================== */
+.start-aside {
+  background-color: #fff;           /* clean white background */
+  padding: 2rem 1rem;
+  max-width: 900px;                 /* same width as why-resource */
+  margin: 2rem auto;                /* center on page */
+}
+
+.start-aside h3 {
+  font-size: 1.5rem;
+  color: var(--um-blue);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  border-bottom: 2px solid var(--um-maize); /* thin maize divider */
+  padding-bottom: 0.5rem;
+}
+
+.start-aside ul {
+  list-style: disc inside;          /* basic bullet points */
+  padding: 0;
+  margin: 1rem 0 0 0;
+  line-height: 1.6;
+}
+
+.start-aside li {
+  margin-bottom: 0.75rem;
+}
+
+.start-aside li strong {
+  color: var(--um-blue);
+}
+
+.start-aside a {
+  color: var(--um-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.start-aside a:hover,
+.start-aside a:focus {
+  color: var(--um-maize);
+  outline: none;
+}
+
+
+/* Container for the three sections */
+.career-sections-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive columns */
+  gap: 2rem; /* spacing between columns */
+  max-width: 1200px; /* optional max width for page alignment */
+  margin: 0 auto 2rem auto; /* center on page and add bottom margin */
+}
+
+/* Keep the existing career-section styles */
+.career-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.career-section h2 {
+  font-size: 1.75rem;
+  color: var(--um-blue);
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+.career-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+/* Inner card / list styling */
+.career-section .card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.career-section ul {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+}
+
+.career-section li {
+  margin-bottom: 0.75rem;
+}
+
+.career-section li a {
+  color: var(--um-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.career-section li a:hover,
+.career-section li a:focus {
+  color: var(--um-maize);
+  outline: none;
+}
+
+/* ==============================
+   Section Pair / Two-Column Layout
+============================== */
+.section-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem; /* spacing between columns */
+  max-width: 1200px;
+  margin: 2rem auto; /* center on page with vertical spacing */
+}
+
+/* Style each inner section like career-section cards */
+.section-pair section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Headings inside these sections */
+.section-pair section h2 {
+  font-size: 1.75rem;
+  color: var(--um-blue);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--um-maize); /* thin maize divider */
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.section-pair section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+/* Lists inside sections */
+.section-pair section ul,
+.section-pair section ol {
+  margin: 1rem 0 0 1.25rem;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.section-pair section li {
+  margin-bottom: 0.75rem;
+}
+
+.section-pair section li a {
+  color: var(--um-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.section-pair section li a:hover,
+.section-pair section li a:focus {
+  color: var(--um-maize);
+  outline: none;
+}
+
+/* ==============================
+   Highlight / Action Sections
+============================== */
+.action-section {
+  background-color: #fdfdfd;           /* very light neutral background */
+  padding: 2.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 950px;
+  border-left: 5px solid var(--um-maize); /* subtle accent */
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* soft shadow for depth */
+}
+
+.action-section h2 {
+  font-size: 2rem;
+  color: var(--um-blue);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  position: relative;
+}
+
+.action-section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--um-maize);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.action-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--um-blue);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.action-section h4 {
+  font-size: 1.25rem;
+  color: var(--um-blue);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.action-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.action-section ul {
+  list-style: disc inside;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.action-section li {
+  margin-bottom: 0.6rem;
+}
+
+.action-section a {
+  color: var(--um-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.action-section a:hover,
+.action-section a:focus {
+  color: var(--um-maize);
+  outline: none;
+}
+
+/* Subtle visual distinction for important paragraphs */
+.action-section p.highlight {
+  background-color: rgba(255,203,5,0.08); /* faint maize tint */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+
+/* ==============================
+   Clean Single-Column Sections
+============================== */
+.clean-section {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-left: 5px solid var(--um-maize);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.clean-section img.responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.clean-section h2 {
+  font-size: 2rem;
+  color: var(--um-blue);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.clean-section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--um-maize);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.clean-section h3, .clean-section h4 {
+  color: var(--um-blue);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.clean-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.clean-section ul {
+  margin-left: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.clean-section li {
+  margin-bottom: 0.6rem;
+}
+
+.clean-section a {
+  color: var(--um-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.clean-section a:hover,
+.clean-section a:focus {
+  color: var(--um-maize);
+  outline: none;
+}
+
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  background-color: var(--um-blue);
+  color: var(--text-light);
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+footer a {
+  color: var(--text-light);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+  text-decoration-color: var(--um-maize);
+  text-underline-offset: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ==============================
+   General Section Fix
+============================== */
+section {
+  width: 100%;
+  overflow-x: hidden; /* prevent any section from causing horizontal scroll */
+}
